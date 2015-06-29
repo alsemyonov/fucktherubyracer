@@ -1,4 +1,4 @@
-require "fucktherubyracer/version"
+require 'fucktherubyracer/version'
 
 module Fucktherubyracer
   # Your code goes here...
