@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'Fucks uninstallable TheRubyRacer gem.'
   spec.description   = 'In order to work on some app you don’t have to fuck with uninstallable shit that should not be used at all.'
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = 'http://alsemyonov.github.com/fucktherubyracer/'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
