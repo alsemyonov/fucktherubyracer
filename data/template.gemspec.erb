@@ -1,0 +1,21 @@
+# coding: utf-8
+
+Gem::Specification.new do |spec|
+  spec.name          = '<%= spec.name %>'
+  spec.version       = '<%= spec.version.to_s %>'
+  spec.authors       = ['Fucktherubyracer']
+  spec.email         = ['al+fucktherubyracer@semyonov.us']
+
+  spec.summary       = 'FUCKED replacement of "<%= spec.name %>" gem'
+  spec.description   = 'Imitation of "<%= spec.name %>" gem with the same dependencies without any functionality.'
+  spec.license       = 'WTFPL'
+  spec.homepage      = 'http://alsemyonov.github.com/fucktherubyracer/'
+
+  spec.files         = []
+  spec.executables   = []
+  spec.require_paths = ['lib']
+
+  <% spec.dependencies.each do |dependency| %>
+  spec.add_<%= dependency.type %>_dependency '<%= dependency.name %>', '<%= dependency.requirement %>'
+  <% end %>
+end
