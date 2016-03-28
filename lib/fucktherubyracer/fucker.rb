@@ -7,10 +7,12 @@ module Fucktherubyracer
     def initialize
     end
 
-    def fuck(gem_name)
-      spec = lockfile_parser.specs.find do |spec|
-        spec.name == gem_name
-      end
+    def fuck(gem_name, version = nil)
+      spec = if version
+               Gem::Specification.new(gem_name, version)
+             else
+               lockfile_parser.specs.find { |spec| spec.name == gem_name }
+             end
 
       generate(spec)
     end
